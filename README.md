@@ -258,3 +258,7 @@ Projeye ileride eklenebilecek özellikler:
 Developed by Udemig Education Project and Mert Kocaturk.
 
 ---
+
+# Ekran Görüntüsü
+
+![](udemig-education.gif)
