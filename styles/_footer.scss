@@ -1,0 +1,57 @@
+footer {
+  .top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    .content-1,
+    .content-2,
+    .content-3 {
+      width: 300px;
+      height: 300px;
+
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 0 20px;
+      h6 {
+        font-size: 25px;
+        font-weight: bold;
+      }
+      a {
+        color: #77767c;
+      }
+    }
+    .social-medias {
+      width: 300px;
+      height: 300px;
+      font-size: 25px;
+      font-weight: bold;
+    }
+    .icons {
+      display: flex;
+      gap: 30px;
+      font-size: 24px;
+      margin-top: 5px;
+      a {
+        width: 45px;
+        height: 45px;
+        background-color: #77767c;
+        display: grid;
+        place-items: center;
+        border-radius: 50%;
+        &:hover {
+          background-color: $main-color;
+        }
+
+        i {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .copyright {
+    p {
+      text-align: center;
+      padding: 20px;
+    }
+  }
+}

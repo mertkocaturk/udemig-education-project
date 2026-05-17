@@ -1,0 +1,99 @@
+@import "./mixin";
+header {
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  @extend .flexBox;
+  padding: 27px 17px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  //   logo
+  .logo {
+    font-size: 33px;
+    font-weight: 700;
+    white-space: nowrap;
+    @include laptop {
+      font-size: 25px;
+    }
+  }
+  @include tablet {
+    font-size: 20px;
+  }
+  span {
+    color: $main-color;
+  }
+}
+nav {
+  @include tablet {
+    display: none !important;
+  }
+  @extend .flexBox;
+
+  li {
+    margin: 15px 22px;
+    a {
+      font-size: $p-font;
+      font-weight: 500;
+      text-transform: uppercase;
+      display: block;
+      @extend .transition;
+      &:hover {
+        scale: 1.2;
+        color: $main-color;
+      }
+    }
+  }
+}
+
+nav.active {
+  display: block !important;
+  position: fixed;
+  right: 10px;
+  top: 120%;
+  display: flex !important;
+  flex-direction: column;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.24);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10.3px);
+  -webkit-backdrop-filter: blur(10.3px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+//right
+.header-right {
+  @extend .flexBox;
+  margin: 0 18px 0 5px;
+  a {
+    @include tablet {
+      display: none;
+    }
+    cursor: pointer;
+    @extend .transition;
+    :hover {
+      color: $main-color;
+      transform: translateY(-3px);
+    }
+    &:first-child {
+      font-size: $p-font;
+      margin-right: 20px;
+    }
+  }
+  i {
+    font-size: 20px;
+    @extend .transition;
+    &:hover {
+      scale: 1.2;
+      color: $main-color;
+    }
+  }
+}
+//   }
+// }

@@ -1,0 +1,39 @@
+#educations {
+  .educations-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    .education-card {
+      text-align: center;
+      margin-bottom: 17px;
+      display: flex;
+      flex-direction: column;
+      .education-card-image {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+
+        img {
+          border-radius: 50%;
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+          @extend .transition;
+          &:hover {
+            scale: 1.2;
+          }
+        }
+      }
+      h4 {
+        font-size: 20px;
+        font-weight: bold;
+        cursor: pointer;
+        @extend .transition;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+  }
+}
